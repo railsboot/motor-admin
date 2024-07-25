@@ -13,6 +13,24 @@ Search, create, update, and delete data entries using a convenient UI. Create co
 
 ## Deployment
 
+### Git Submodule
+```bash
+cd motor-admin
+
+git rm --cached vendor/motor-admin
+
+git submodule add https://github.com/railsboot/motor-admin-rails.git vendor/motor-admin
+
+git checkout -b trunk
+
+git add ./*
+
+git commit -m "调整子项目更新仓库：https://github.com/railsboot/motor-admin-rails.git"
+
+git merge trunk
+
+git push -u origin master
+```
 ### Heroku
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/motor-admin/motor-admin-heroku)
